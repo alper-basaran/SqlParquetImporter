@@ -1,0 +1,16 @@
+05-08-20,0,ARIMA,MediaMarkt,Xiaomi RedMi,TR,Electronics,1000,15
+05-08-20,0,ARIMA,MediaMarkt,Audi A3,TR,Auto,150000,1000
+05-09-20,0,ARIMA,MediaMarkt,Xiaomi RedMi,TR,Electronics,1050,15
+05-09-20,0,ARIMA,MediaMarkt,Audi A3,TR,Auto,145000,1000
+05-08-21,0,ARIMA,MediaMarkt,Xiaomi RedMi,TR,Electronics,950,15
+05-08-21,0,ARIMA,MediaMarkt,Audi A3,TR,Auto,135000,1000
+05-09-21,0,ARIMA,MediaMarkt,Xiaomi RedMi,TR,Electronics,1025,15
+05-09-21,0,ARIMA,MediaMarkt,Audi A3,TR,Auto,165000,1000
+05-08-20,0,ARIMA,MediaMarkt,Xiaomi RedMi,FR,Electronics,300,10
+05-08-20,0,ARIMA,MediaMarkt,Audi A3,FR,Auto,25000,200
+05-09-20,0,ARIMA,MediaMarkt,Xiaomi RedMi,FR,Electronics,285,10
+05-09-20,0,ARIMA,MediaMarkt,Audi A3,FR,Auto,25500,200
+05-08-21,0,ARIMA,MediaMarkt,Xiaomi RedMi,FR,Electronics,305,10
+05-08-21,0,ARIMA,MediaMarkt,Audi A3,FR,Auto,27000,200
+05-09-21,0,ARIMA,MediaMarkt,Xiaomi RedMi,FR,Electronics,295,10
+05-08-21,0,ARIMA,MediaMarkt,Audi A3,FR,Auto,24250,200

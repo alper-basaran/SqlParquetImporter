@@ -1,0 +1,26 @@
+version: '3.4'
+
+services:
+
+services:
+  sql-server:
+    build:
+      context: ./sql-server
+    environment:
+      SA_PASSWORD: Aa123456!
+      DB_SERVER: sql-server
+      ACCEPT_EULA: "Y"
+      PATH: "/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/mssql-tools/bin/"
+    ports:
+      - "1434:1433"
+  py-agent:
+    build:
+      context: ./py-agent
+    container_name: py_agent
+    environment: 
+      DB_SERVER: sql-server
+      SA_PASSWORD: Aa123456!
+      DB_NAME: PriceForecastDb
+      DB_USER: sa
+    depends_on:
+      - "sql-server"
