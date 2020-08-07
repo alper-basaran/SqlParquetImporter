@@ -144,18 +144,21 @@ CREATE TABLE [dbo].[PriceForecasts](
 ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 GO
 
-CREATE TABLE [ImportEvents] (
-    [EventId] int NOT NULL IDENTITY,
-    [EventDate] datetime2 NOT NULL DEFAULT (GETDATE()),
-    [LastImportedForecastDateTime] datetime2 NULL,
-    [LastImportedForecastModel] nvarchar(450) NULL,
-    [LastImportedMarket] nvarchar(450) NULL,
-    [LastImportedProduct] nvarchar(450) NULL,
-    [LastImportedCountryCode] nvarchar(450) NULL,
-    CONSTRAINT [PK_ImportEvents] PRIMARY KEY ([EventId]),
-    CONSTRAINT [FK_ImportEvents_PriceForecasts_LastImportedForecastDateTime_LastImportedForecastModel_LastImportedMarket_LastImportedProduct_La~] FOREIGN KEY ([LastImportedForecastDateTime], [LastImportedForecastModel], [LastImportedMarket], [LastImportedProduct], [LastImportedCountryCode]) REFERENCES [PriceForecasts] ([ForecastDateTime], [ForecastModel], [Market], [Product], [CountryCode]) ON DELETE NO ACTION
-);
+CREATE TABLE [dbo].[ImportEvents](
+	[EventId] [int] IDENTITY(1,1) NOT NULL,
+	[EventDate] [datetime2](7) NOT NULL,
+	[LastImportedDate] [datetime2](7) NOT NULL,
+ CONSTRAINT [PK_ImportEvents] PRIMARY KEY CLUSTERED 
+(
+	[EventId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
 
+ALTER TABLE [dbo].[ImportEvents] ADD  DEFAULT (getdate()) FOR [EventDate]
+GO
+
+ALTER TABLE [dbo].[ImportEvents] ADD  DEFAULT ('0001-01-01T00:00:00.0000000') FOR [LastImportedDate]
 GO
 
 
