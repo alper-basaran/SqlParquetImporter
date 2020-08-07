@@ -7,6 +7,6 @@ namespace SqlParquetImporter.Domain.Interfaces.Services
 {
     public interface IParquetWriterService
     {
-        void WriteData(IQueryable<PriceForecast> data, string basePath);
+        void WriteData(IEnumerable<PriceForecast> data, string basePath);
     }
 }

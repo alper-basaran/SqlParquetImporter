@@ -16,14 +16,14 @@ namespace SqlParquetImported.Infra
             _context = context;
 
         }
-        public IQueryable<PriceForecast> GetForecastAfterDate(DateTime dateTime, int limit = 100)
+        public IEnumerable<PriceForecast> GetForecastAfterDate(DateTime dateTime, int limit = 100)
         {
             var forecasts = _context.PriceForecasts
                 .AsNoTracking()
                 .Where(p => p.ForecastDateTime > dateTime)
                 .Take(limit);
             
-            return forecasts;
+            return forecasts.ToList();
         }
         public PriceForecast GetFirstForecast()
         {
