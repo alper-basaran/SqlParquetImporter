@@ -19,6 +19,8 @@ Since the primary purpose of the mock setup was having an environment to simulat
 - The data import script is currently not invoked in the entrypoint of the py_agent container, an additional script can be introduced into the environment for orchestrating the integration tests
 - The main project needs to be dockerized as well, for CI testing
 
+- Additionally, a standalone Hadoop container can be included into the integration setup for more end-to-end testing, by writing the parquet output into HDFS.
+
 ### Tech
 This repository can be splitted into two different codebases. Under the /integration folder, there's a dockerized mock environment for:
 - Creating a database instance
