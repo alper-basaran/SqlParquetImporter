@@ -4,6 +4,8 @@ SQLParquetImporter is a test project that is being developed for demonstrating t
 
 > :warning: Please note that the code and this documentation is not a finished project and the primary purpose of this repository is for demonstating the software design of the .NET core solution located under /src folder.
 
+![Container Diagram](/blob/c4.png?raw=true "Container Diagram")
+
 ### TODO
 
 ##### Dotnet Project
